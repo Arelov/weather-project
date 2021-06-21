@@ -54,8 +54,8 @@ export default createStore({
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         params,
       })
-      const sunrise = moment((data.sys.sunrise + data.timezone) * 1000)
-      const sunset = moment((data.sys.sunset + data.timezone) * 1000)
+      const sunrise = moment((data.sys.sunrise) * 1000)
+      const sunset = moment((data.sys.sunset) * 1000)
       const duration = moment.duration(sunset.diff(sunrise))
       const hours = parseInt(duration.asHours())
       const minutes = parseInt(duration.asMinutes()) % 60
