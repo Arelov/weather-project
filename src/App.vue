@@ -12,6 +12,8 @@ export default {
   },
   mounted() {
     this.$store.dispatch("receiveLocation");
+    this.$store.dispatch("getTodayForecast");
+    this.$store.dispatch("get5dayForecast");
   },
 };
 </script>
